@@ -1,0 +1,390 @@
+:root {
+  color-scheme: light;
+  --page: #f7f8f5;
+  --paper: #ffffff;
+  --ink: #202822;
+  --muted: #4d5951;
+  --line: #dce4dd;
+  --accent: #145b3b;
+  --accent-soft: #eaf3ed;
+  --focus: #145b3b;
+  --measure: 70ch;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--page);
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.13em;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+::selection {
+  color: #102218;
+  background: #bce4c8;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.55rem 0.8rem;
+  transform: translateY(-160%);
+  border-radius: 0.4rem;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 650;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.header-inner,
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: min(100% - 3rem, 76rem);
+  min-height: 4.25rem;
+  margin-inline: auto;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.brand-mark {
+  width: 0.43rem;
+  height: 0.43rem;
+  border-radius: 50%;
+  background: #39a36a;
+}
+
+.primary-nav,
+.site-footer nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.primary-nav a,
+.site-footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+  font-size: 0.925rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary-nav a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.42rem;
+}
+
+.page-shell {
+  width: min(100% - 3rem, 76rem);
+  margin-inline: auto;
+  padding-block: 2.5rem 5.5rem;
+}
+
+.draft-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.8rem;
+  width: fit-content;
+  margin-bottom: 2.1rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #c8ddce;
+  border-radius: 0.45rem;
+  background: var(--accent-soft);
+  color: #263b2d;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.draft-status-label {
+  font-weight: 750;
+}
+
+.review-date {
+  color: #3c5143;
+}
+
+.page-heading {
+  max-width: var(--measure);
+  padding-bottom: 2.35rem;
+}
+
+.page-type {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 18ch;
+  margin-bottom: 0.8rem;
+  font-size: 2.65rem;
+  font-weight: 720;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.page-intro {
+  max-width: var(--measure);
+  margin-bottom: 0;
+  color: #39443d;
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.reading-layout {
+  display: grid;
+  grid-template-columns: minmax(12rem, 15rem) minmax(0, var(--measure));
+  align-items: start;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.contents-nav {
+  position: sticky;
+  top: 1.5rem;
+  padding-top: 0.2rem;
+}
+
+.contents-title {
+  margin-bottom: 0.7rem;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.contents-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contents-nav li + li {
+  margin-top: 0.55rem;
+}
+
+.contents-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.contents-nav a:hover,
+.site-footer nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.prose {
+  max-width: var(--measure);
+}
+
+.prose section {
+  scroll-margin-top: 1.5rem;
+}
+
+.prose section + section {
+  margin-top: 2.25rem;
+  padding-top: 2.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.prose h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.32rem;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.35;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  color: #303a33;
+  overflow-wrap: anywhere;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose strong {
+  color: #1d2720;
+  font-weight: 700;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.footer-inner {
+  min-height: 5rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.site-footer nav {
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+}
+
+.site-footer nav a {
+  font-size: 0.86rem;
+}
+
+@media (max-width: 48rem) {
+  .header-inner,
+  .footer-inner,
+  .page-shell {
+    width: min(100% - 2rem, 42rem);
+  }
+
+  .page-shell {
+    padding-block: 1.6rem 4rem;
+  }
+
+  .draft-status {
+    margin-bottom: 1.65rem;
+  }
+
+  .page-heading {
+    padding-bottom: 1.55rem;
+  }
+
+  .reading-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.8rem;
+  }
+
+  .contents-nav {
+    position: static;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contents-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 1rem;
+  }
+
+  .contents-nav li + li {
+    margin-top: 0;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    padding-block: 1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .header-inner,
+  .footer-inner,
+  .page-shell {
+    width: min(100% - 1.5rem, 26rem);
+  }
+
+  .header-inner {
+    min-height: 3.8rem;
+  }
+
+  .primary-nav {
+    gap: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .draft-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
