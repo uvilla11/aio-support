@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How Aio handles information on your device and through connected services.">
+    <meta name="theme-color" content="#f7f8f5">
+    <title>Privacy Policy | Aio</title>
+    <link rel="stylesheet" href="styles.css?v=200cb6accb74">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="privacy.html" aria-label="Aio privacy policy">
+          <span class="brand-name">Aio</span>
+          <span class="brand-mark" aria-hidden="true"></span>
+        </a>
+        <nav class="primary-nav" aria-label="Aio pages">
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="support.html">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <div class="page-heading">
+        <p class="page-type">Privacy</p>
+        <h1>Aio Privacy Policy</h1>
+        <p class="page-intro">Aio brings tasks, a Shelf for saved items, calendar information, timers, weather, music controls, and Ask Aio together in one app. This notice explains what Aio stores on your device and what information is sent to service providers when you use connected features.</p>
+      </div>
+
+      <div class="reading-layout">
+        <nav class="contents-nav" aria-label="On this page">
+          <p class="contents-title">On this page</p>
+          <ul>
+            <li><a href="#on-device">Information on your device</a></li>
+            <li><a href="#connected-services">Location and connected services</a></li>
+            <li><a href="#use-retention">Use, retention, and choices</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <article class="prose">
+          <section id="on-device" aria-labelledby="on-device-heading">
+            <h2 id="on-device-heading">Information stored on your device</h2>
+            <p>Aio stores app preferences, task data, Shelf entries and their files, calendar display summaries, weather snapshots, selected app-tray details and icons, and some music activity information on your device. Some settings, summaries, and files use an Apple App Group container shared by Aio and its extensions. Calendar summaries are stored in Aio's shared App Group container and include event titles, dates, and calendar names; they do not include event locations. Task completion history is stored in Aio's private local preferences.</p>
+            <p>Task completion history records a task identifier, a title snapshot, whether the task was marked complete or incomplete, and the event time. Aio applies a 365-day age bound and a 2,000-event cap when it saves or reads task history. A history query can omit older events from its results without rewriting saved storage; Aio does not run a background purge. During an upgrade from an older version, Aio keeps the old shared-container copy until a later app process verifies the private copy. If it cannot verify the copy, Aio leaves the old source in place and does not use it. Use <strong>Clear task history</strong> in Ask Aio to remove retained task history. If Aio cannot safely remove every saved history copy, it reports a failure and leaves any copy it could not verify in place.</p>
+            <p>Aio also stores local custom-trial access state in shared app data. It includes the original trial start date and whether the trial extension was claimed; if Aio cannot determine the trial state, it may store a short status reason. The main app issues, adopts, or updates this record, while extensions read it without issuing or extending a trial. Paid access is verified separately through StoreKit.</p>
+            <p>Trial eligibility depends on local evidence. If Aio cannot validate an existing trial record, it may mark trial access unavailable instead of resetting the original start date. If all local trial data is erased, Aio may be unable to distinguish that installation from first use. Reinstalling or clearing local data does not guarantee that trial access will be erased, reset, renewed, or extended.</p>
+            <p>Assistant history is off by default. If you enable it, Aio stores a bounded local transcript of up to six turns and 6,000 characters. You can clear it or turn saved history off in Ask Aio settings.</p>
+            <p>Shelf items you remove are moved to Trash, where they can be restored or emptied. Items older than 14 days become eligible for purge; Aio checks for expired items when the Shelf loads and after Shelf removal actions, with no background purge timer. Recovery copies may retain older item details. Image and icon files remain while those copies still reference them, so deleting an item does not guarantee immediate erasure of every local copy. Aio stores the selected-location weather cache in shared app data, including the selected place or city, fetch time, forecast information, provider and attribution details, and alert information. Aio treats snapshots younger than one hour as fresh and may use a same-location cached snapshot after a failed refresh while it is younger than six hours. These age limits control whether Aio uses the cache; they do not delete the saved record when it expires, so it may remain in shared app data until overwritten or otherwise removed. Some cached app artwork is also stored locally.</p>
+          </section>
+
+          <section id="connected-services" aria-labelledby="connected-services-heading">
+            <h2 id="connected-services-heading">Location, weather, and other connected services</h2>
+            <p>When you use current-location weather, Aio requests your device location and sends the coordinates needed for the forecast to Apple WeatherKit. Apple says WeatherKit uses location information only to provide forecasts, does not associate it with personally identifiable information, and does not track it between requests. This statement describes Apple's WeatherKit service, not Aio's other connected services. See <a href="https://developer.apple.com/weatherkit/">Apple WeatherKit's privacy information</a>.</p>
+            <p>A custom city name or a calendar event location may be sent to Apple MapKit for place search or geocoding. A calendar row with an event location can trigger a weather lookup when it appears. These MapKit place lookups are separate from the WeatherKit forecast request.</p>
+            <p>Ask Aio uses Apple's on-device Foundation Models when available. Web research is off by default. If you turn it on and request current information, Aio sends a search query to DuckDuckGo and may fetch result-page content from the websites that host those pages. Those websites have their own privacy practices. See <a href="https://duckduckgo.com/privacy">DuckDuckGo's privacy policy</a> for its handling of search requests.</p>
+            <p>Aio may contact Apple to search the App Store catalog for an app you add to the tray and download its icon, and may use Apple's MusicKit for Apple Music features and artwork. Aio may also fetch a title or icon for a URL saved to your Shelf using Apple's LinkPresentation framework; the destination website may receive that request. The App Store processes purchases and restores through StoreKit. These requests go to the named service providers or the relevant website; Aio does not provide account sign-in or an Aio cloud-sync service.</p>
+            <p>Turning off Ask Aio web research prevents that assistant search and page-fetch path. It does not disable weather, MapKit place searches, app-icon lookups, Apple Music, StoreKit, or other connected services described here.</p>
+          </section>
+
+          <section id="use-retention" aria-labelledby="use-retention-heading">
+            <h2 id="use-retention-heading">Use, retention, and choices</h2>
+            <p>Aio uses locally stored information to provide the features you request, show your calendar and weather summaries, manage saved items and timers, and display music activity. No Aio advertising or account sign-in is provided. App usage analytics are not sent to an Aio analytics service in the current app.</p>
+            <p>You can choose current location or a custom city in Weather settings and manage location access in iOS Settings. You can turn Ask Aio web research and saved assistant history off, clear assistant history, and clear task history. When Aio detects that Calendar access has been revoked, it attempts to remove cached calendar summaries and show an event-free permission status. If the system prevents cache cleanup, cached summaries may remain on this device. iOS manages Live Activity content separately from Aio's local cache. Shelf provides Trash, Restore, and Empty Trash controls. Apple and other service providers handle information they receive under their own terms and retention practices.</p>
+            <p>This policy describes local app behavior and service requests; it does not promise that iOS backups or a third-party service's records are deleted when you remove information from Aio.</p>
+          </section>
+          <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <p>For questions about this privacy notice, email <a href="mailto:ask.aio.support@gmail.com">ask.aio.support@gmail.com</a>.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Aio</p>
+        <nav aria-label="Footer links">
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="support.html">Support</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
