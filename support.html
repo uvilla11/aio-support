@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Answers to common questions about Aio purchases, history, Shelf, weather, and connected services.">
+    <meta name="theme-color" content="#f7f8f5">
+    <title>Support | Aio</title>
+    <link rel="stylesheet" href="styles.css?v=200cb6accb74">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="support.html" aria-label="Aio support">
+          <span class="brand-name">Aio</span>
+          <span class="brand-mark" aria-hidden="true"></span>
+        </a>
+        <nav class="primary-nav" aria-label="Aio pages">
+          <a href="privacy.html">Privacy</a>
+          <a href="support.html" aria-current="page">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <div class="page-heading">
+        <p class="page-type">Help and answers</p>
+        <h1>Aio Support</h1>
+        <p class="page-intro">Answers to common questions about purchases, Ask Aio, your Shelf, weather, and connected services.</p>
+      </div>
+
+      <div class="reading-layout">
+        <nav class="contents-nav" aria-label="Support topics">
+          <p class="contents-title">Support topics</p>
+          <ul>
+            <li><a href="#restore-purchase">Restore a purchase</a></li>
+            <li><a href="#account">Aio account</a></li>
+            <li><a href="#connected-services">Information sent to services</a></li>
+            <li><a href="#assistant-history">Clear Ask Aio history</a></li>
+            <li><a href="#shelf-items">Remove a Shelf item</a></li>
+            <li><a href="#weather-location">Choose a weather location</a></li>
+            <li><a href="#license">License agreement</a></li>
+            <li><a href="#contact">Contact support</a></li>
+          </ul>
+        </nav>
+
+        <article class="prose support-answers">
+          <section id="restore-purchase" aria-labelledby="restore-purchase-heading">
+            <h2 id="restore-purchase-heading">How do I restore a purchase?</h2>
+            <p>Open the Aio upgrade screen and tap <strong>Restore Purchases</strong>. Aio asks the App Store to synchronize purchases, then refreshes the verified entitlements. If synchronization fails, Aio shows an error and still refreshes current ownership. A sync error by itself does not grant or revoke access.</p>
+          </section>
+
+          <section id="account" aria-labelledby="account-heading">
+            <h2 id="account-heading">Does Aio require an Aio account?</h2>
+            <p>Aio does not ask you to create an Aio account or offer an Aio cloud-sync service. Apple features such as purchases and Apple Music can use your Apple account and system permissions.</p>
+          </section>
+
+          <section id="connected-services" aria-labelledby="connected-services-heading">
+            <h2 id="connected-services-heading">What information does Aio send to other services?</h2>
+            <p>Current-location weather sends the coordinates needed for the forecast to Apple WeatherKit. Custom city and event-location lookups may be sent to Apple MapKit. When you enable web research in Ask Aio, a search query goes to DuckDuckGo and Aio may request result-page content from the websites that host those results. Aio also contacts Apple for App Store icon lookups, Apple Music features, and purchase processing. Saved-link previews use Apple's LinkPresentation framework to fetch information from the saved URL; the destination website may receive that request. Turning off Ask Aio web research does not turn off these other connected features.</p>
+            <p>Read the <a href="privacy.html#connected-services">Privacy Policy's connected services section</a> for more detail.</p>
+          </section>
+
+          <section id="assistant-history" aria-labelledby="assistant-history-heading">
+            <h2 id="assistant-history-heading">How do I clear Ask Aio history?</h2>
+            <p>Open Ask Aio settings. You can clear saved assistant history or turn it off. Saved assistant history is off by default. Use <strong>Clear task history</strong> to remove the separate task-completion log. Aio applies a 365-day age bound and a 2,000-event cap when it saves or reads task history. A history query may omit older events without deleting them from saved storage, and Aio does not run a background purge. During an upgrade from an older version, Aio keeps the old shared-container copy until a later app process verifies the private copy. If Aio cannot verify that copy, it leaves the old source in place and does not use it. If Aio cannot safely remove every saved history copy, it reports a failure and leaves any copy it could not verify in place.</p>
+          </section>
+
+          <section id="shelf-items" aria-labelledby="shelf-items-heading">
+            <h2 id="shelf-items-heading">What happens when I remove a Shelf item?</h2>
+            <p>The item moves to Trash, where you can restore it or empty the Trash. Items older than 14 days become eligible for cleanup; Aio checks expiry when the Shelf loads and after Shelf removal actions. There is no background purge timer. Recovery copies may retain older item details. Image and icon files remain while those copies still reference them, so deleting an item does not guarantee immediate erasure of every local copy. Device backup behavior is managed by iOS.</p>
+          </section>
+
+          <section id="weather-location" aria-labelledby="weather-location-heading">
+            <h2 id="weather-location-heading">How can I choose a weather location?</h2>
+            <p>Open Weather settings and choose current location or a custom city. Current-location weather needs iOS location permission; Aio sends the coordinates needed for a forecast to Apple WeatherKit. For a custom city, Aio sends the city name to Apple MapKit to resolve coordinates, then uses those coordinates to request the WeatherKit forecast. Event-location weather can also send the event location to MapKit for coordinate lookup before Aio requests a forecast from WeatherKit.</p>
+          </section>
+
+          <section id="license" aria-labelledby="license-heading">
+            <h2 id="license-heading">Which license agreement applies to Aio?</h2>
+            <p>Aio uses Apple's Standard End User License Agreement. Read <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Standard End User License Agreement</a>.</p>
+          </section>
+          <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Aio Support</h2>
+            <p>For help with Aio, email <a href="mailto:ask.aio.support@gmail.com">ask.aio.support@gmail.com</a>.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Aio</p>
+        <nav aria-label="Footer links">
+          <a href="privacy.html">Privacy</a>
+          <a href="support.html" aria-current="page">Support</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
